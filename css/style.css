@@ -477,6 +477,7 @@ nav > * {
     background: rgba(235, 235, 235, 0.1);
     border-radius: 10px;
     backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
 }
 .call_back_form .name_form{
     font-size: 36px;
