@@ -5,8 +5,9 @@
     color: #2c2e37;
 }
 body{
-    width: 1920px;
+    max-width: 1920px;
 }
+
 h1{
     font-size: 50px;
     font-weight:500;
@@ -30,9 +31,10 @@ header{
     background-position: 50% 50%;
     background-repeat: no-repeat;
     height: 700px;
+    padding: 0 20px;
 }
 nav{
-    width: 1140px;
+    width: 100%;
     height: 88px;
     display: flex;
     flex-direction: row;
@@ -53,9 +55,14 @@ nav > * {
     font-size: 12px;
     font-weight: 700;
     color: #9daeb6;
+
+    border-bottom: 0px solid #36aeea;
+    transition: ease 0.2s;
 }
 .ul_menu li a:hover {
+    font-size: 14px;
     border-bottom: 2px solid #36aeea;
+    transition: ease 0.2s;
 }
 .but_call{
     width: 150px;
@@ -68,11 +75,14 @@ nav > * {
     background: rgba(255, 255, 255, 0.4);
     cursor: pointer;
 
+    transition: ease 0.2s;
 }
 .but_call:hover{
     background-color: #36aeea;
     color: whitesmoke;
     cursor: pointer;
+
+    transition: ease 0.2s;
 }
 .main_scr{
     width: 500px;
@@ -107,17 +117,34 @@ nav > * {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: ease 0.3s;
+}
+.but_order_main_scr:hover{
+    transition: ease 0.3s;
+    background: #2d8fc0;
+}
+.but_order_main_scr:active{
+    background: #19506c;
 }
 .sec_about_us{
     display: -webkit-inline-box;
     height: 665px;
-    padding: 0 390px;
+    width: 60%;
+    margin: 0 auto;
+    padding: 0 20%;
     background-image: url(../img/Vector_Smart_Object.png);
     background-position: 35% 50%;
 }
+
+
 .sec_about_us .text_block{
     margin: 0;
+    width: 30%;
     padding-top: 250px;
+}
+.sec_about_us .img_block{
+    width: 70%;
+    position: relative;
 }
 .waves{
     margin-bottom: 45px;
@@ -142,14 +169,13 @@ nav > * {
     cursor: pointer;
 }
 .sec_about_us * .img1{
-    position: relative;
-    bottom: 40px;
-    left: 215px;
+    position: absolute;
+    bottom: 140px;
+    left: 70px;
 }
 .sec_about_us * .img2{
-    position: relative;
-    bottom: 300px;
-    left: 127px;
+    position: absolute;
+    bottom: 0px;
 }
 .sec_our_jurnal{
     text-align: center;
@@ -192,9 +218,9 @@ nav > * {
     font-weight: 100;
 }
 .offer{
-    /* width: 1140px; */
+    width: 80%;
     height: 650px;
-    padding-left: 390px;
+    padding-left: 20%;
     background-image: url(../img/Curves\ 4.png);
 }
 .offer .waves{
@@ -250,27 +276,25 @@ nav > * {
     margin: 0px;
 }
 .scheme{
-    padding: 70px 390px 0px 390px;
+    width: 60%;
+    padding: 70px 20%;
     text-align: center;
 }
 .scheme .waves{
     margin-top: 70px;
 }
-.scheme .lines{
-    position: relative;
-    top: -415px;
-    z-index: 1;
-}
 .scheme .icon{
     z-index: 2;
 }
 .scheme .diagram_box{
-    display: grid;
-    grid-template-columns: 250px 335px 255px 330px;
+    display: flex;
+}
+.scheme .diagram_box_col{
+    display: flex;
+    flex-direction: column;
 }
 .scheme .num{
     margin-top: 75px;
-    margin-bottom: 60px;
     z-index: 2;
 }
 .diagram_box p{
@@ -284,17 +308,15 @@ nav > * {
     font-weight: normal;
 }
 .trevel_with_us{
+    width: 60%;
     text-align: center;
-    padding: 0 390px 0 390px;
+    padding: 0 20%;
     background-image: url(../img/worldmap-dots.png);
     background-position: 0 0;
     height: 1000px;
 }
 .offers{
-    display: grid;
-    grid-template-columns: 19% 19% 19% 19% 19%;
-    grid-template-rows: 385px;
-    grid-column-gap: 1.25%;
+    display: flex;
 }
 .offers *{
     border: none;
@@ -307,6 +329,8 @@ nav > * {
     flex-flow: row wrap;
     align-content: space-between;
     opacity: 0.8;
+    width: 18%;
+    height: 380px;
 }
 .offer1{
     background-image: url(../img/carpati.png);
@@ -366,8 +390,11 @@ nav > * {
     font-weight: 700;
 }
 .gallery{
-    padding: 60px 390px 80px 390px;
+    padding: 60px 20% 80px 20%;
     text-align: center;
+
+
+    border: red 1px solid;
 }
 .photo_box{
     display: flex;
@@ -419,7 +446,7 @@ nav > * {
 .sponsors{
     background: #f8f9fa;
     height: 180px;
-    padding: 0 390px 0 390px;
+    padding: 0 15%;
     display: flex;
     align-items: center;
 }
@@ -531,4 +558,35 @@ footer p{
 footer .phone{
     font-size: 27px;
     font-weight: 700;
+}
+
+
+
+
+
+
+
+@media  (max-width:1920px)  {
+    body{
+        min-width: 1420px;
+    }
+    .sec_about_us{
+        width: 80%;
+        padding: 0 10%;
+    }
+    .sec_about_us .text_block{
+        width: 35%;
+    }
+    .sec_about_us .img_block{
+        width: 65%;
+    }
+    .scheme{
+        width: 80%;
+        padding: 70px 10%;
+        text-align: center;
+    }
+    .trevel_with_us{
+        width: 80%;
+        padding: 0 10%;
+    }
 }
